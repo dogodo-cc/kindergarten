@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
-    "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1",
+    "dev": "npx vite --host",
+    "build": "npx vite build",
+    "preview": "npx vite preview --host",
     "check": "node scripts/check-data.mjs",
-    "test": "node --test scripts/components.test.mjs"
+    "test": "node --test scripts/*.test.mjs"
   },
   "devDependencies": {
     "happy-dom": "^21.0.4",

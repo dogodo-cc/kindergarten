@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>阳光下的彩虹 · 滨海成长册</title>
+  <defs>
+    <filter id="crayon" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="12" result="edge"/>
+      <feDisplacementMap in="SourceGraphic" in2="edge" scale="3" xChannelSelector="R" yChannelSelector="G" result="drawing"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="7" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 1  0 0 0 0 0.98  0 0 0 0 0.95  0 0 0 .45 0"/>
+      <feComposite in2="drawing" operator="in"/>
+      <feBlend in2="drawing" mode="screen"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="#fffaf4"/>
+  <g filter="url(#crayon)" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#f5b638" stroke-width="11" fill="none">
+      <path d="m290 116-3-19m40 23 7-17m20 36 17-10m-11 42 20 1m-128-31-13-13m23 48-20 4"/>
+    </g>
+    <path d="M344 174c1 27-20 48-45 46-28-1-44-21-44-45 0-25 20-44 45-43 24 1 44 18 44 42Z" fill="#f8c745"/>
+    <path d="M117 344c-1-87 57-150 136-150 81 0 141 64 141 150" fill="none" stroke="#e98273" stroke-width="28"/>
+    <path d="M143 344c-1-72 45-124 110-124 67 0 115 52 115 124" fill="none" stroke="#f3b855" stroke-width="24"/>
+    <path d="M167 344c-1-58 36-100 86-100 53 0 91 43 91 100" fill="none" stroke="#8dbba1" stroke-width="24"/>
+    <path d="M191 344c0-43 24-76 62-76 39 0 67 33 67 76" fill="none" stroke="#79afc9" stroke-width="24"/>
+    <path d="M215 344c0-30 15-52 38-52 25 0 43 23 43 52" fill="none" stroke="#ad99c3" stroke-width="24"/>
+    <g fill="#fffdf8" stroke="#e8ded0" stroke-width="3">
+      <path d="M107 355c-20-2-23-24-6-32-5-22 24-35 37-18 12-25 43-17 45 5 19-1 29 15 22 29-4 12-15 17-33 17Z"/>
+      <path d="M318 356c-19-2-24-23-8-33-4-23 23-34 38-18 12-24 42-17 46 5 22 0 30 26 13 39-7 6-18 8-31 7Z"/>
+    </g>
+  </g>
+</svg>

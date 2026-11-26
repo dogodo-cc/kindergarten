@@ -402,6 +402,42 @@ crayon-art svg {
   overflow: hidden;
   border-radius: 15px 11px 13px 10px;
 }
+.swipe-viewport {
+  touch-action: pan-y pinch-zoom;
+}
+.swipe-track {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  transform: translate3d(
+    calc(var(--slide-position, 0) * -100% + var(--drag-offset, 0px)),
+    0,
+    0
+  );
+}
+.swipe-track.is-animating {
+  transition: transform 260ms cubic-bezier(0.22, 0.75, 0.25, 1);
+  will-change: transform;
+}
+.swipe-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.swipe-viewport.is-dragging .swipe-track {
+  transition: none;
+  will-change: transform;
+}
+.swipe-viewport img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.swipe-viewport.is-dragging,
+.swipe-viewport.is-dragging .photo-open {
+  cursor: grabbing;
+}
+.swipe-viewport.is-dragging .expand-icon {
+  opacity: 0;
+}
 .photo-open {
   display: block;
   padding: 0;
@@ -1455,8 +1491,14 @@ crayon-art svg {
   border-radius: 10px;
   overflow: hidden;
 }
+.lightbox-stage .swipe-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .lightbox-image {
   width: 100%;
+  height: min(68dvh, 640px);
   max-height: 68dvh;
   object-fit: contain;
 }
@@ -2802,6 +2844,7 @@ crayon-art svg {
     gap: 12px;
   }
   .lightbox-image {
+    height: 65dvh;
     max-height: 65dvh;
   }
   .lightbox-prev,

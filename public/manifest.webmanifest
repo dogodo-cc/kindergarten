@@ -1,0 +1,33 @@
+{
+  "id": "./",
+  "name": "翔安滨海幼儿园 · 成长纪念册",
+  "short_name": "滨海成长册",
+  "description": "珍藏幼儿园日常、精彩活动与每一次成长。",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#fffaf4",
+  "background_color": "#fffaf4",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
