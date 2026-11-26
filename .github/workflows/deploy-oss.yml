@@ -56,7 +56,7 @@ jobs:
       - name: Enable ossutil
         uses: manyuanrong/setup-ossutil@v3.0
         with:
-          endpoint: 'oss-cn-hangzhou.aliyuncs.com'
+          endpoint: 'oss-cn-beijing.aliyuncs.com'
           access-key-id: ${{ secrets.AccessKeyId }}
           access-key-secret: ${{ secrets.AccessKeySecret }}
 
