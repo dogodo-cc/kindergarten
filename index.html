@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fffaf4" />
+    <meta
+      name="description"
+      content="翔安滨海幼儿园个人成长纪念册，珍藏幼儿园日常、精彩活动与每一次成长。"
+    />
+    <title>我的幼儿园生活 · 翔安滨海幼儿园</title>
+    <link rel="icon" type="image/svg+xml" href="./illustrations/favicon.svg" />
+    <link
+      rel="preload"
+      href="./fonts/ZCOOLKuaiLe-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body data-page="home">
+    <svg
+      class="layout-defs"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <defs>
+        <filter id="sketch-rough" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency=".09"
+            numOctaves="3"
+            seed="7"
+            result="n"
+          />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" />
+        </filter>
+        <filter id="wax-letters" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency=".48"
+            numOctaves="3"
+            seed="4"
+            result="n"
+          />
+          <feColorMatrix
+            in="n"
+            type="matrix"
+            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 4 -2.05"
+            result="gr"
+          />
+          <feComposite in="SourceGraphic" in2="gr" operator="out" />
+          <feDisplacementMap in2="n" scale="1" />
+        </filter>
+      </defs>
+    </svg>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <site-header></site-header>
+    <main id="main" tabindex="-1">
+      <p class="loading" role="status">正在翻开成长纪念册…</p>
+    </main>
+    <site-footer></site-footer>
+    <photo-lightbox></photo-lightbox>
+    <noscript>请启用 JavaScript，以浏览这本成长纪念册。</noscript>
+  </body>
+</html>

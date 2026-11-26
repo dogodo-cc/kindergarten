@@ -1,0 +1,466 @@
+{
+  "site": {
+    "name": "翔安滨海幼儿园",
+    "subtitle": "我的幼儿园生活",
+    "child": "小海螺",
+    "footer": "在爱与陪伴里，把童年过成彩色。",
+    "copyright": "翔安滨海幼儿园 · 个人成长纪念册",
+    "notice": "照片与成长记录为演示内容，可在 JSON 中替换为自己的珍贵回忆。",
+    "navigation": [
+      { "label": "首页", "href": "./index.html", "page": "home" },
+      {
+        "label": "精彩活动",
+        "href": "./activities.html",
+        "page": "activities"
+      },
+      { "label": "成长蜕变", "href": "./growth.html", "page": "growth" }
+    ]
+  },
+  "ui": {
+    "skip": "跳到主要内容",
+    "menu": "打开导航菜单",
+    "menuClose": "收起导航菜单",
+    "previous": "上一张照片",
+    "next": "下一张照片",
+    "view": "查看大图",
+    "close": "关闭大图",
+    "lightboxTitle": "珍藏这一刻",
+    "galleryHint": "左右滑动或使用方向键翻页 · Esc 关闭",
+    "more": "查看更多",
+    "allYears": "全部时光",
+    "yearLabel": "按年份查看",
+    "recordUnit": "段快乐回忆",
+    "photoUnit": "张照片",
+    "skills": "我学会了",
+    "changes": "成长的小变化",
+    "error": "纪念册暂时未能打开",
+    "retry": "重新打开",
+    "empty": "新的故事，还在慢慢发生。"
+  },
+  "home": {
+    "titleLines": [
+      [{ "text": "我的", "color": "blue" }],
+      [
+        { "text": "幼", "color": "coral" },
+        { "text": "儿", "color": "blue" },
+        { "text": "园", "color": "green" },
+        { "text": "生活", "color": "orange" }
+      ]
+    ],
+    "intro": "在翔安滨海幼儿园的\n快乐成长记录",
+    "heroPhoto": {
+      "src": "./images/hero.jpg",
+      "alt": "戴黄色帽子的女孩在阳光下开心地笑",
+      "caption": "阳光正好，今天的我也很快乐！"
+    },
+    "quickLinks": [
+      {
+        "label": "幼儿园日常",
+        "href": "#daily",
+        "icon": "bear",
+        "color": "coral"
+      },
+      {
+        "label": "精彩活动",
+        "href": "./activities.html",
+        "icon": "party",
+        "color": "yellow"
+      },
+      {
+        "label": "成长蜕变",
+        "href": "./growth.html",
+        "icon": "sprout",
+        "color": "blue"
+      }
+    ],
+    "dailyTitle": "幼儿园日常",
+    "activityTitle": "精彩活动",
+    "growthTitle": "成长蜕变",
+    "dailyPhotos": [
+      {
+        "src": "./images/hero.jpg",
+        "alt": "阳光下的灿烂笑容",
+        "caption": "把笑声装进口袋"
+      },
+      {
+        "src": "./images/nature.jpg",
+        "alt": "小朋友一起观察花园里的植物",
+        "caption": "发现一片叶子的秘密"
+      },
+      {
+        "src": "./images/sports.jpg",
+        "alt": "在操场上快乐奔跑的小朋友",
+        "caption": "迎着阳光，快乐奔跑"
+      },
+      {
+        "src": "./images/art.jpg",
+        "alt": "在画架前认真画画的女孩",
+        "caption": "用小画笔描绘大世界"
+      }
+    ],
+    "previewActivityIds": ["sports", "mid-autumn", "autumn"],
+    "previewGrowthIds": ["first-day", "exploration", "confidence"],
+    "growthLabels": ["刚入园", "适应成长", "快乐成长"]
+  },
+  "activitiesPage": {
+    "title": [
+      { "text": "精", "color": "coral" },
+      { "text": "彩", "color": "blue" },
+      { "text": "活动", "color": "orange" }
+    ],
+    "description": "一起回顾孩子们的快乐成长时光",
+    "endTitle": "快乐的小河，还在向前流呀",
+    "endText": "每一个闪闪发光的日子，都值得好好珍藏。"
+  },
+  "growthPage": {
+    "title": [
+      { "text": "成", "color": "coral" },
+      { "text": "长", "color": "orange" },
+      { "text": "蜕", "color": "blue" },
+      { "text": "变", "color": "purple" }
+    ],
+    "description": "在幼儿园的时光里，\n一步一步，探索世界，收获成长",
+    "endTitle": "带着满满的爱，奔向下一片星海",
+    "endText": "我的成长故事，未完待续……"
+  },
+  "activities": [
+    {
+      "id": "autumn",
+      "date": "2026-10-18",
+      "title": "秋天的自然探索",
+      "summary": "走进大自然，观察植物的变化，收集秋天的颜色。",
+      "color": "yellow",
+      "icon": "leaf",
+      "photos": [
+        {
+          "src": "./images/hero.jpg",
+          "alt": "秋日阳光下，戴黄色帽子的女孩开怀大笑",
+          "caption": "秋天的自然探索 · 和阳光打个招呼"
+        },
+        {
+          "src": "./images/nature.jpg",
+          "alt": "小朋友用放大镜探索植物",
+          "caption": "秋天的自然探索 · 发现叶子的秘密"
+        },
+        {
+          "src": "./images/garden.jpg",
+          "alt": "花园里的绿色植物",
+          "caption": "秋天的自然探索 · 收集大自然的颜色"
+        }
+      ]
+    },
+    {
+      "id": "sports",
+      "date": "2026-09-28",
+      "title": "运动小达人",
+      "summary": "在趣味运动会中奔跑、跳跃、合作，感受运动的快乐！",
+      "color": "blue",
+      "icon": "trophy",
+      "photos": [
+        {
+          "src": "./images/sports.jpg",
+          "alt": "男孩和小伙伴在绿草地上快乐奔跑",
+          "caption": "运动小达人 · 向快乐出发"
+        },
+        {
+          "src": "./images/hero.jpg",
+          "alt": "户外活动中灿烂的笑容",
+          "caption": "运动小达人 · 把快乐写在脸上"
+        },
+        {
+          "src": "./images/nature.jpg",
+          "alt": "户外活动中一起探索的小伙伴",
+          "caption": "运动小达人 · 和朋友一起挑战"
+        }
+      ]
+    },
+    {
+      "id": "painting",
+      "date": "2026-09-10",
+      "title": "创意绘画日",
+      "summary": "用画笔描绘心中的世界，每一幅作品都充满想象力。",
+      "color": "coral",
+      "icon": "palette",
+      "photos": [
+        {
+          "src": "./images/art.jpg",
+          "alt": "女孩在户外画架前专心绘画",
+          "caption": "创意绘画日 · 今天的想象是什么颜色"
+        },
+        {
+          "src": "./images/paint.jpg",
+          "alt": "充满颜色的绘画材料",
+          "caption": "创意绘画日 · 每一种颜色都是小心情"
+        },
+        {
+          "src": "./images/nature.jpg",
+          "alt": "观察自然寻找绘画灵感",
+          "caption": "创意绘画日 · 大自然是我的灵感"
+        }
+      ]
+    },
+    {
+      "id": "mid-autumn",
+      "date": "2026-09-06",
+      "title": "中秋节主题活动",
+      "summary": "一起做月饼、赏明月，感受传统节日的温暖与团圆。",
+      "color": "green",
+      "icon": "mooncake",
+      "photos": [
+        {
+          "src": "./images/festival.jpg",
+          "alt": "戴厨师帽的小朋友开心地展示月饼",
+          "caption": "中秋节主题活动 · 月饼甜甜，笑容也甜甜"
+        },
+        {
+          "src": "./images/hero.jpg",
+          "alt": "阳光中开心的小朋友",
+          "caption": "中秋节主题活动 · 记住团圆的小美好"
+        },
+        {
+          "src": "./images/art.jpg",
+          "alt": "专心制作手工作品的小朋友",
+          "caption": "中秋节主题活动 · 小小双手传递祝福"
+        }
+      ]
+    },
+    {
+      "id": "childrens-day",
+      "date": "2026-06-01",
+      "title": "六一儿童节",
+      "summary": "舞台表演、趣味游戏、欢乐市集，属于孩子们的特别节日！",
+      "color": "purple",
+      "icon": "balloons",
+      "photos": [
+        {
+          "src": "./images/hero.jpg",
+          "alt": "在阳光下灿烂微笑的小朋友",
+          "caption": "六一儿童节 · 愿每天都这样快乐"
+        },
+        {
+          "src": "./images/sports.jpg",
+          "alt": "一起玩耍奔跑的小朋友",
+          "caption": "六一儿童节 · 把快乐分给好朋友"
+        },
+        {
+          "src": "./images/festival.jpg",
+          "alt": "小朋友们一起庆祝节日",
+          "caption": "六一儿童节 · 最喜欢的节日"
+        }
+      ]
+    },
+    {
+      "id": "ocean",
+      "date": "2026-05-12",
+      "title": "海洋主题探究",
+      "summary": "认识海洋生物，制作海洋小手工，发现蓝色世界的奇妙。",
+      "color": "blue",
+      "icon": "shell",
+      "photos": [
+        {
+          "src": "./images/nature.jpg",
+          "alt": "小朋友透过放大镜认真观察",
+          "caption": "海洋主题探究 · 小眼睛里有大世界"
+        },
+        {
+          "src": "./images/beach.jpg",
+          "alt": "蔚蓝海水与金色沙滩",
+          "caption": "海洋主题探究 · 听海浪唱一首歌"
+        },
+        {
+          "src": "./images/art.jpg",
+          "alt": "用画笔记录探索发现",
+          "caption": "海洋主题探究 · 把海洋画进心里"
+        }
+      ]
+    }
+  ],
+  "growth": [
+    {
+      "id": "first-day",
+      "date": "2023-09-01",
+      "age": "小班",
+      "title": "小班 · 初入园",
+      "color": "coral",
+      "planet": "orange-planet",
+      "icon": "flower",
+      "skills": ["学会适应集体生活", "慢慢变得独立、勇敢", "会自己整理小物品"],
+      "change": "从第一次挥手告别，到喜欢上幼儿园，小小的我开始勇敢迈步。",
+      "photos": [
+        {
+          "src": "./images/hero.jpg",
+          "alt": "戴黄色帽子的小女孩露出开心的笑容",
+          "caption": "初入园 · 你好，我的新世界"
+        },
+        {
+          "src": "./images/art.jpg",
+          "alt": "第一次尝试绘画活动",
+          "caption": "初入园 · 第一次尝试新的事物"
+        },
+        {
+          "src": "./images/nature.jpg",
+          "alt": "认识一起探索的小伙伴",
+          "caption": "初入园 · 认识新朋友"
+        }
+      ]
+    },
+    {
+      "id": "exploration",
+      "date": "2024-03-01",
+      "age": "小班",
+      "title": "小班 · 探索与尝试",
+      "color": "blue",
+      "planet": "blue-planet",
+      "icon": "magnify",
+      "skills": ["开始好奇地探索世界", "喜欢动手、提问", "愿意尝试新事物"],
+      "change": "每一个“为什么”，都带我走向一个新发现。",
+      "photos": [
+        {
+          "src": "./images/nature.jpg",
+          "alt": "小朋友用放大镜观察植物",
+          "caption": "探索与尝试 · 我有一百个为什么"
+        },
+        {
+          "src": "./images/garden.jpg",
+          "alt": "小花园里的绿植",
+          "caption": "探索与尝试 · 发现身边的小生命"
+        },
+        {
+          "src": "./images/art.jpg",
+          "alt": "把新发现画在纸上",
+          "caption": "探索与尝试 · 试一试，我可以"
+        }
+      ]
+    },
+    {
+      "id": "creativity",
+      "date": "2024-09-01",
+      "age": "中班",
+      "title": "中班 · 表达与创造",
+      "color": "orange",
+      "planet": "saturn",
+      "icon": "palette",
+      "skills": [
+        "喜欢用绘画、手工等方式表达想法",
+        "想象力越来越丰富",
+        "作品更有创意了"
+      ],
+      "change": "天马行空的小想法，现在能用画笔和双手说出来了。",
+      "photos": [
+        {
+          "src": "./images/art.jpg",
+          "alt": "在画架前认真创作的女孩",
+          "caption": "表达与创造 · 画出我的小宇宙"
+        },
+        {
+          "src": "./images/paint.jpg",
+          "alt": "丰富多彩的绘画工具",
+          "caption": "表达与创造 · 让颜色替我说话"
+        },
+        {
+          "src": "./images/hero.jpg",
+          "alt": "自信展示自己的笑容",
+          "caption": "表达与创造 · 看，我做到了"
+        }
+      ]
+    },
+    {
+      "id": "friendship",
+      "date": "2025-03-01",
+      "age": "中班",
+      "title": "中班 · 合作与分享",
+      "color": "purple",
+      "planet": "moon",
+      "icon": "heart",
+      "skills": ["在游戏和活动中，学会与同伴合作、分享", "懂得倾听和互相帮助"],
+      "change": "快乐可以分成两份，和朋友一起的每一天都很温暖。",
+      "photos": [
+        {
+          "src": "./images/sports.jpg",
+          "alt": "小伙伴在操场上一同奔跑",
+          "caption": "合作与分享 · 我们一起向前跑"
+        },
+        {
+          "src": "./images/nature.jpg",
+          "alt": "两个小朋友共同探索自然",
+          "caption": "合作与分享 · 把发现分享给你"
+        },
+        {
+          "src": "./images/festival.jpg",
+          "alt": "和朋友一同庆祝节日",
+          "caption": "合作与分享 · 快乐分给你一半"
+        }
+      ]
+    },
+    {
+      "id": "confidence",
+      "date": "2025-09-01",
+      "age": "大班",
+      "title": "大班 · 自信与担当",
+      "color": "green",
+      "planet": "earth",
+      "icon": "crown",
+      "skills": [
+        "变得更加自信",
+        "乐于参与班级活动",
+        "愿意承担小任务",
+        "也更有责任心了"
+      ],
+      "change": "从“老师帮帮我”，到“让我来帮你”，我也成为能照顾别人的大孩子。",
+      "photos": [
+        {
+          "src": "./images/festival.jpg",
+          "alt": "戴厨师帽的小朋友自信地展示月饼",
+          "caption": "自信与担当 · 小小的我也很能干"
+        },
+        {
+          "src": "./images/art.jpg",
+          "alt": "独立完成一幅画",
+          "caption": "自信与担当 · 这是我的作品"
+        },
+        {
+          "src": "./images/hero.jpg",
+          "alt": "开心而自信的笑容",
+          "caption": "自信与担当 · 我的笑容里有光"
+        }
+      ]
+    },
+    {
+      "id": "future",
+      "date": "2026-06-01",
+      "age": "大班",
+      "title": "大班 · 准备向未来",
+      "color": "purple",
+      "planet": "galaxy",
+      "icon": "plane",
+      "skills": [
+        "在不断的体验和挑战中",
+        "学会了坚持、思考和解决问题",
+        "正自信地迎接新的成长阶段！"
+      ],
+      "change": "带着好奇、勇气和满满的爱，准备好向更大的世界出发。",
+      "photos": [
+        {
+          "src": "./images/hero.jpg",
+          "alt": "仰望阳光，露出充满期待的笑容",
+          "caption": "准备向未来 · 更大的世界，我来啦"
+        },
+        {
+          "src": "./images/sports.jpg",
+          "alt": "迎着阳光勇敢奔跑",
+          "caption": "准备向未来 · 带着勇气继续向前"
+        },
+        {
+          "src": "./images/nature.jpg",
+          "alt": "带着好奇继续探索",
+          "caption": "准备向未来 · 成长永远未完待续"
+        }
+      ]
+    }
+  ],
+  "credits": {
+    "notice": "儿童照片由 AI 生成，仅作相册演示；静物照片来自 Unsplash。",
+    "generatedBy": "OpenAI Imagegen built-in",
+    "assetPromptsFile": "提示词留档/assets-notes.md"
+  }
+}
