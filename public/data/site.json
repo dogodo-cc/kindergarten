@@ -459,7 +459,6 @@
     }
   ],
   "credits": {
-    "notice": "儿童照片由 AI 生成，仅作相册演示；静物照片来自 Unsplash。",
     "generatedBy": "OpenAI Imagegen built-in",
     "assetPromptsFile": "提示词留档/assets-notes.md"
   }

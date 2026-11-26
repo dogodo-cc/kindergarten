@@ -1,0 +1,85 @@
+name: 发布到 oss
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          lfs: false
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check data
+        run: npm run check
+
+      - name: Test
+        run: npm test
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: ./dist
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, 'publish')))
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-dist
+          path: ./dist
+
+      - name: Enable ossutil
+        uses: manyuanrong/setup-ossutil@v3.0
+        with:
+          endpoint: 'oss-cn-hangzhou.aliyuncs.com'
+          access-key-id: ${{ secrets.AccessKeyId }}
+          access-key-secret: ${{ secrets.AccessKeySecret }}
+
+      - name: Deploy project
+        run: |
+          LOCAL_DIR="./dist"
+          OSS_BUCKET="oss://kindergarten-binghai/"
+
+          ossutil ls "${OSS_BUCKET}" -s | grep "^oss://" | sed 's/[[:space:]]*$//' > /tmp/oss_files.txt
+
+          find "$LOCAL_DIR" -type f | while read -r file; do
+              relative_path=${file#$LOCAL_DIR/}
+              relative_path=${relative_path#./}
+              oss_path="$OSS_BUCKET$relative_path"
+
+              if [[ "$relative_path" != *"/"* ]] || [[ "$file" == *.html ]]; then
+                  printf "\033[42;97mupload (force)\033[0m: %s -> %s\n" "$file" "$oss_path"
+                  ossutil cp -f "$file" "$oss_path"
+              elif ! grep -qF "$oss_path" /tmp/oss_files.txt; then
+                  printf "\033[1mupload ==>\033[0m: %s -> %s\n" "$file" "$oss_path"
+                  ossutil cp -f "$file" "$oss_path"
+              else
+                  printf "\033[90mskip\033[0m: %s\n" "$relative_path"
+              fi
+          done
+          rm -f /tmp/oss_files.txt

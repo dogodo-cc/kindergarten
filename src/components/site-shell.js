@@ -22,8 +22,8 @@ class SiteHeader extends HTMLElement {
   }
 }
 class SiteFooter extends HTMLElement {
-  set data({ site, credits }) {
-    this.innerHTML = `<footer class="site-footer"><p>${e(site.footer)}</p><small>${e(site.copyright)}</small><p class="credits">${e(credits.notice)}</p></footer>`;
+  set data({ site }) {
+    this.innerHTML = `<footer class="site-footer"><p>${e(site.footer)}</p><small>${e(site.copyright)}</small></footer>`;
   }
 }
 customElements.define("site-header", SiteHeader);

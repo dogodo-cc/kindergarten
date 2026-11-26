@@ -553,7 +553,8 @@ crayon-art svg {
 .home-hero .coast {
   position: absolute;
   bottom: -7px;
-  left: calc((1120px - 100vw) / 2);
+  left: 50%;
+  transform: translateX(-50%);
   width: 100vw;
   height: 88px;
   z-index: 3;
@@ -704,7 +705,7 @@ crayon-art svg {
 }
 .daily-palette {
   position: absolute;
-  right: -28px;
+  right: -14px;
   bottom: -2px;
   width: 95px;
   height: 95px;
@@ -1143,13 +1144,6 @@ crayon-art svg {
   font-size: 14px;
   margin-top: 5px;
 }
-.credits {
-  font-family: system-ui, sans-serif;
-  font-size: 11px;
-  color: #85909a;
-  margin: 10px auto 0;
-  max-width: 650px;
-}
 .universe {
   position: relative;
   overflow: hidden;
@@ -1535,9 +1529,6 @@ crayon-art svg {
   .content-width {
     width: min(1200px, calc(100% - 120px));
   }
-  .home-hero .coast {
-    left: calc((1200px - 100vw) / 2);
-  }
   .home-hero {
     min-height: 450px;
   }
@@ -1562,9 +1553,6 @@ crayon-art svg {
   }
 }
 @media (max-width: 1199px) {
-  .home-hero .coast {
-    left: -40px;
-  }
   .header-inner {
     width: calc(100% - 40px);
   }
@@ -1599,13 +1587,10 @@ crayon-art svg {
   .hero-picture {
     padding-inline: 22px;
   }
-  .home-hero .coast {
-    left: -35px;
-  }
   .home-hero .coast-lighthouse {
     width: 155px;
     height: 175px;
-    right: -1%;
+    right: 0;
   }
   .quick-links {
     gap: 27px;
@@ -1763,9 +1748,6 @@ crayon-art svg {
   .content-width {
     width: calc(100% - 46px);
   }
-  .home-hero .coast {
-    left: -23px;
-  }
   .home-hero {
     min-height: 315px;
     padding: 22px 0 28px;
@@ -1856,7 +1838,7 @@ crayon-art svg {
   .daily-palette {
     width: 65px;
     height: 65px;
-    right: -18px;
+    right: 0;
     bottom: 1px;
   }
   .home-bottom {
@@ -2219,14 +2201,13 @@ crayon-art svg {
     top: 28px;
   }
   .home-hero .coast {
-    left: -18px;
     bottom: -5px;
     height: 52px;
   }
   .home-hero .coast-lighthouse {
     width: 101px;
     height: 115px;
-    right: -10px;
+    right: 0;
     bottom: 6px;
   }
   .home-hero .coast-boat {
@@ -2295,7 +2276,7 @@ crayon-art svg {
     aspect-ratio: 1.3;
   }
   .daily-palette {
-    right: -14px;
+    right: 0;
     bottom: -1px;
     width: 68px;
     height: 68px;
@@ -2432,11 +2413,6 @@ crayon-art svg {
   .site-footer small {
     font-size: 12px;
   }
-  .credits {
-    font-size: 10px;
-    line-height: 1.6;
-    margin-top: 9px;
-  }
   .page-hero {
     min-height: 174px;
     padding: 31px 0 19px;
@@ -2453,7 +2429,7 @@ crayon-art svg {
   .hero-art-right {
     width: 94px;
     height: 88px;
-    right: -21px;
+    right: 0;
     top: 0;
     opacity: 0.85;
     z-index: -1;
@@ -2499,7 +2475,8 @@ crayon-art svg {
   }
   .activity-row.reverse .activity-photo {
     grid-column: 3;
-    padding: 6px 0 0 6px;
+    /* Leave room for the rotated backing sheets of the photo stack. */
+    padding: 6px 8px 0 6px;
   }
   .activity-photo .photo-stack {
     margin-top: 13px;
@@ -2552,7 +2529,8 @@ crayon-art svg {
   .activity-row.reverse .activity-story {
     grid-column: 3;
     grid-row: 1;
-    margin: 66px 0 0 5px;
+    /* Reserve space for the tilted brush wash and its decorative icon. */
+    margin: 66px 8px 0 5px;
     padding: 14px 8px 12px;
     transform: rotate(-3deg);
   }
@@ -2641,7 +2619,7 @@ crayon-art svg {
     width: 93px;
     height: 105px;
     bottom: 9px;
-    right: -5px;
+    right: 0;
   }
   .coast-sea .coast-boat {
     width: 75px;
@@ -2673,7 +2651,7 @@ crayon-art svg {
   .growth-hero .hero-art-right {
     width: 92px;
     height: 100px;
-    right: -21px;
+    right: 0;
     top: 17px;
     z-index: -1;
   }
